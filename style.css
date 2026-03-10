@@ -1,0 +1,215 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.card_character {
+    margin-top: 50px;
+}
+
+.card_character:hover {
+    background-color: #222121; 
+    border-left-color: #ff0000; 
+    box-shadow: -10px 0 20px rgba(128, 0, 0, 0.2); 
+}
+
+.char_name {
+    color: #5b0000;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.role {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.bio {
+    color: #cccccc;
+    line-height: 1.6;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+.wiki_link {
+    color: #4f3c3c;
+    text-decoration: none; 
+    font-weight: bold;
+    border-bottom: 1px dashed #800000; 
+    transition: 0.3s;
+}
+
+.wiki_link:hover {
+    color: #821d1dce;
+    border-bottom-style: solid;
+    background-color: rgba(128, 0, 0, 0.1);
+}
+
+.toggle_input {
+    display: none;
+}
+
+.char_header {
+    cursor: pointer;
+    display: block;
+}
+
+.char_details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column; 
+}
+
+.toggle_input:checked ~ .char_details {
+    max-height: 1500px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.char_gallery {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.gallery_img {
+    width: 32%; 
+    height: auto; 
+    object-fit: cover;
+    border: 1px solid #800000;
+}
+
+.intro_sector {
+    color: #cccccc;
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6; 
+    border-bottom: 1px solid #333; 
+    display: block; 
+    margin-bottom: 30px; 
+}
+
+.intro_sector p {
+    font-family: sans-serif; 
+    font-size: 1.1em;
+    margin-bottom: 20px; 
+}
+
+
+.warning {
+    color: #ff0000; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    border: 1px dashed #ff0000; 
+    padding: 10px;
+    display: inline-block; 
+}
+
+#check_revy:checked ~ .char_details {
+    max-height: 2000px; 
+    opacity: 1;
+    margin-top: 20px;
+}
+
+#check_revy:checked ~ .char_header .char_name {
+    color: #ff0000; 
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+}
+
+.character_card {
+    margin-bottom: 30px; 
+}
+
+#check_eda:checked ~ .char_details {
+    max-height: 2000px; 
+    opacity: 1;
+    margin-top: 20px;
+}
+
+#check_eda:checked ~ .char_header .char_name {
+    color: #d4af37; 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+
+.hands-overlay {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    height: 200px;
+    background: url('foto.png') repeat-x bottom;
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.spacer {
+    height: 60vh; 
+    background: linear-gradient(to bottom, #000, #0a0000);
+}
+
+.hell-footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 250vh;
+    background: linear-gradient(to bottom, #000 0%, #000 35%, #400 65%, #800 100%);
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.hands-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px; 
+    filter: drop-shadow(0 0 10px #4b1616) brightness(0.7);
+}
+
+.final-quote {
+    color: #ff3333;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#music-btn {
+    position: fixed; 
+    top: 20px;    
+    right: 20px;     
+    z-index: 9999;   
+    
+    
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #ff3333; 
+    border: 1px solid #ff3333;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+#music-btn:hover {
+    background-color: #ff3333;
+    color: #000;
+    box-shadow: 0 0 15px #ff3333;
+}
+
